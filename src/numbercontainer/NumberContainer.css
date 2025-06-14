@@ -1,0 +1,50 @@
+.mainNumberContainer {
+    margin-bottom: 10px;
+    padding-left: 3px;
+}
+
+.numberContainer {
+    display: flex;
+    justify-content: left;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+
+.numberContainer input {
+    display: flex;
+    text-align: center;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: rgb(104, 0, 200);
+}
+
+.mainTipContainer {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+
+.mainTipContainer .btnContainer button {
+    height: 100%;
+    padding: 0px 20px;
+    border-radius: 2px;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(104, 0, 200);
+    transition: 0.2s;
+}
+
+.mainTipContainer .tips {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 3px;
+}
+
+.mainTipContainer .tips span {
+    color: white;
+}

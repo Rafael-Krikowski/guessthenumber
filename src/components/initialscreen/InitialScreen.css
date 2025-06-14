@@ -1,0 +1,42 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.mainForm {
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainForm input {
+    min-height: 100px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: rgb(104, 0, 200);
+    
+}
+
+.mainForm button {
+    min-height: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(104, 0, 200);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.mainForm button:hover {
+    color: rgb(104, 0, 200);
+    background-color: white;
+}
