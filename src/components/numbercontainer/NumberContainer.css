@@ -21,30 +21,15 @@
     color: rgb(104, 0, 200);
 }
 
-.mainTipContainer {
-    display: flex;
-    justify-content: left;
-    gap: 20px;
-}
 
 
-.mainTipContainer .btnContainer button {
-    height: 100%;
-    padding: 0px 20px;
+.btnContainer button {
+    padding: 10px 20px;
     border-radius: 2px;
     font-weight: bold;
+    font-size: 1em;
     border: 2px solid white;
     color: white;
     background-color: rgb(104, 0, 200);
     transition: 0.2s;
-}
-
-.mainTipContainer .tips {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 3px;
-}
-
-.mainTipContainer .tips span {
-    color: white;
 }

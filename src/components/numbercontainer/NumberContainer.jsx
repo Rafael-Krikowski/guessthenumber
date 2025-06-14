@@ -1,15 +1,31 @@
 import { useEffect, useRef, useState } from 'react'
 import './NumberContainer.css'
 
-const NumberContainer = ({numbers, getUserNumbers}) => {
+const NumberContainer = ({numbers, getUserNumbers, correctAlgarism, getGuessesList}) => {
+    
     const inputsRef = useRef([])
-    //const [userNumbers, setUserNumbers] = useState([])
 
     const getNumbers = () => {
         let values = []
         values = inputsRef.current.map(input => (parseInt(input.value)))
+
+        if(values.length == 0) {
+            return
+        }
+
+        const {position, existence} = correctAlgarism(numbers, values)
+
+        const currentGuess = {
+            guess: values.join(' '),
+            position,
+            existence
+        }
+
+        getGuessesList(currentGuess)
         getUserNumbers(values)
     }
+
+    
 
     useEffect(
         () => {
@@ -17,6 +33,8 @@ const NumberContainer = ({numbers, getUserNumbers}) => {
         },
         [inputsRef]
     )
+
+    
 
     return (
         <div className='mainNumberContainer'>
@@ -26,15 +44,8 @@ const NumberContainer = ({numbers, getUserNumbers}) => {
                 ))}
             </div>
 
-            <div className='mainTipContainer'>
-                <div className='btnContainer'>
+            <div className='btnContainer'>
                     <button onClick={getNumbers}>OK</button>
-                </div>
-                
-                <div className='tips'>
-                    <span>Números certos: 2 </span>
-                    <span>Lugares certos: 1 </span>
-                </div>
             </div>
 
         </div>

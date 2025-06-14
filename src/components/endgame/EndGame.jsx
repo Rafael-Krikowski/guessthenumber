@@ -1,9 +1,11 @@
-const EndGame = ({newGame}) => {
+import './EndGame.css'
+
+const EndGame = ({newGame, guessedNumber, attempts}) => {
     return (
-        <div>
+        <div className="endGameContainer">
             <h1>Parabéns! Você descobriu o número secreto!</h1>
-            <span>2345</span>
-            <span>Tentativas: 15</span>
+            <p>Numero: {guessedNumber}</p>
+            <p>Tentativas: {attempts}</p>
             
             <button onClick={newGame}>Novo jogo</button>
         </div>
