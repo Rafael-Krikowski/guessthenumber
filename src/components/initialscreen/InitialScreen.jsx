@@ -3,6 +3,7 @@ import './InitialScreen.css'
 
 const InitialScreen = ({GameStart}) => {
     const [numberAlert, setAlert] = useState(false)
+    const [digitNumber, setDigitNumber] = useState(3)
 
     
 
@@ -18,10 +19,14 @@ const InitialScreen = ({GameStart}) => {
 
     return (
         <>
-        <h1>Informe a quantidade de algarismos:</h1>
+        <h1>Adivinhe o número!! </h1>
+
+        <p>Informe abaixo a quantidade de dígitos que o número secreto deve possuir.</p>
 
         <form onSubmit={handlerSubmit} className="mainForm">
-            <input type="number" name="number"/>
+            <input type="number" name="number" min={1} max={10} 
+                onChange={(e) => {setDigitNumber(e.target.value)}}
+                value={digitNumber}/>
             <button type="submit"> Começar </button>
         </form>
 

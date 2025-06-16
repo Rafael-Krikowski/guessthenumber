@@ -94,7 +94,14 @@ const Game = ({endGame, algarismQuantity, newGame, getNumber, getAttempts}) => {
         <div className="mainGameContainer">
             <div className="btnEncerrarContainer">
                 <button onClick={newGame} className="btnEncerrar">Encerrar</button>
-                <button onClick={newGame} className="btnEncerrar">Revelar</button>
+                <button className="btnEncerrar">Revelar</button>
+            </div>
+
+            <div className="tips">
+                <p>Tente descobrir qual é o número secreto.</p>
+                <p>A tabela abaixo lhe dará dicas</p>
+                <p>Exemplo: se o número secreto fosse 325 e seu palpite foi 492, a dica seria que existe um dígito certo (o dígito 2) mas na posição errada (ele deveria estar na segunda casa) </p>
+                <p>Com base nisso, utilize sua lógica para descobrir o número</p>
             </div>
 
             <div>

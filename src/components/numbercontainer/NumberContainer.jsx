@@ -40,7 +40,7 @@ const NumberContainer = ({numbers, getUserNumbers, correctAlgarism, getGuessesLi
         <div className='mainNumberContainer'>
             <div className="numberContainer">
                 {numbers.map((_, i) => (
-                    <input type="number" key={i} ref={(el) => (inputsRef.current[i] = el)}/>
+                    <input type="number" max={9} min={0} key={i} ref={(el) => (inputsRef.current[i] = el)}/>
                 ))}
             </div>
 

@@ -21,6 +21,10 @@
     color: rgb(104, 0, 200);
 }
 
+.btnContainer {
+    margin-top: 10px;
+}
+
 
 
 .btnContainer button {
